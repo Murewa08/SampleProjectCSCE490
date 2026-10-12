@@ -48,7 +48,9 @@ button {
 }
 
 button:hover {
-  background-color: #722d1a;
+  background-color: lightcoral;
+  color: darkred;
+  border: 2px solid black;
 }
 
 .search-bar {

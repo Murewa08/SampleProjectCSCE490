@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Book Library</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-    <!-- React libraries -->
+    <!--These are the react libraries -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
@@ -65,12 +65,12 @@ function App() {
   return (
     <main className="container">
       <h1>Mini Book Library</h1>
-      <p>Add, search, and remove books from your library.</p>
+      <p>Welcome to your Mini Book Library! Add, remove, and search for your books from your library.</p>
 
       <form onSubmit={addBook} className="book-form">
         <input
           type="text"
-          placeholder="Book title"
+          placeholder="Book Title"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
@@ -88,7 +88,7 @@ function App() {
       <input
         className="search-bar"
         type="text"
-        placeholder="Search by title or author"
+        placeholder="Search title or author"
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
@@ -97,7 +97,7 @@ function App() {
         <h2>Your Library</h2>
 
         {visibleBooks.length === 0 ? (
-          <p>No matching books found.</p>
+          <p>There are no books to display.</p>
         ) : (
           visibleBooks.map((book) => (
             <article className="book-card" key={book.id}>
@@ -107,7 +107,7 @@ function App() {
               </div>
 
               <button onClick={() => removeBook(book.id)}>
-                Remove
+                Remove Book
               </button>
             </article>
           ))
